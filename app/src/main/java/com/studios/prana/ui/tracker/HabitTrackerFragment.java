@@ -1,4 +1,4 @@
-package com.studios.prana.ui.notifications;
+package com.studios.prana.ui.tracker;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,17 +14,17 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.studios.prana.R;
 
-public class NotificationsFragment extends Fragment {
+public class HabitTrackerFragment extends Fragment {
 
-    private NotificationsViewModel notificationsViewModel;
+    private HabitTrackerViewModel habitTrackerViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        notificationsViewModel =
-                ViewModelProviders.of(this).get(NotificationsViewModel.class);
+        habitTrackerViewModel =
+                ViewModelProviders.of(this).get(HabitTrackerViewModel.class);
         View root = inflater.inflate(R.layout.fragment_notifications, container, false);
         final TextView textView = root.findViewById(R.id.text_notifications);
-        notificationsViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        habitTrackerViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);

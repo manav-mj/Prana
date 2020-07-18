@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/navigation_lifestyle"
-        android:name="com.studios.prana.ui.home.HomeFragment"
+        android:name="com.studios.prana.ui.lifestyle.LifestyleFragment"
         android:label="@string/title_lifestyle"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/navigation_habit"
-        android:name="com.studios.prana.ui.dashboard.DashboardFragment"
+        android:name="com.studios.prana.ui.tracker.HabitTrackerFragment"
         android:label="@string/title_habit"
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment
         android:id="@+id/navigation_remedies"
-        android:name="com.studios.prana.ui.notifications.NotificationsFragment"
+        android:name="com.studios.prana.ui.Remedies.RemediesFragment"
         android:label="@string/title_remedies"
         tools:layout="@layout/fragment_notifications" />
 </navigation>

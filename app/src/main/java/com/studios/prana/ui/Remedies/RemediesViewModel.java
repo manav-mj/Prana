@@ -1,12 +1,10 @@
-package com.studios.prana.ui.home;
+package com.studios.prana.ui.Remedies;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-import java.util.Set;
-
-public class HomeViewModel extends ViewModel {
+public class RemediesViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
@@ -14,7 +12,7 @@ public class HomeViewModel extends ViewModel {
 
     private final String[] titles = {"Mind", "Cardiovascular","Skin","Digestive","Eye","Dental","Nose","Blood","Hair","Uterus","Feet","Sleep","Obesity","Ear","Speech"};
 
-    public HomeViewModel() {
+    public RemediesViewModel() {
         mTitles = new MutableLiveData<>();
         mTitles.setValue(titles);
     }

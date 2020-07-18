@@ -1,4 +1,4 @@
-package com.studios.prana.ui.home;
+package com.studios.prana.ui.Remedies;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,7 +10,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
@@ -20,23 +19,23 @@ import com.studios.prana.R;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class HomeFragment extends Fragment {
+public class RemediesFragment extends Fragment {
 
     @BindView(R.id.grid_container)
     GridLayout mGridLayout;
 
-    private HomeViewModel homeViewModel;
+    private RemediesViewModel remediesViewModel;
 
     private int[] icons = {R.drawable.ic_mind, R.drawable.ic_heart, R.drawable.ic_skin, R.drawable.ic_digestive, R.drawable.ic_eye, R.drawable.ic_dental, R.drawable.ic_nose, R.drawable.ic_blood, R.drawable.ic_hair, R.drawable.ic_uterus, R.drawable.ic_feet, R.drawable.ic_sleep, R.drawable.ic_obesity, R.drawable.ic_ear, R.drawable.ic_speech};
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
-        homeViewModel =
-                ViewModelProviders.of(this).get(HomeViewModel.class);
+        remediesViewModel =
+                ViewModelProviders.of(this).get(RemediesViewModel.class);
         View root = inflater.inflate(R.layout.fragment_home, container, false);
         ButterKnife.bind(this, root);
-        homeViewModel.getTitle().observe(getViewLifecycleOwner(), new Observer<String[]>() {
+        remediesViewModel.getTitle().observe(getViewLifecycleOwner(), new Observer<String[]>() {
             @Override
             public void onChanged(String[] strings) {
                 for (int i = 0; i < strings.length; i++) {
