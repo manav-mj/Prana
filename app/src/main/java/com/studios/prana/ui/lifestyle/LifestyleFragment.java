@@ -28,7 +28,7 @@ public class LifestyleFragment extends Fragment {
 
     private LifestyleViewModel lifestyleViewModel;
     private final int[] colors = {R.color.seaGreen, R.color.buttonColorLight, R.color.colorAccent, R.color.buttonColorLight, R.color.seaGreen, R.color.colorAccent};
-    private final String[] lifestyleTypes = {"Diet", "Wellness", "    Massage", "Cleansing", "Exercise", "Herbs"};
+    private final String[] lifestyleTypes = {"Diet", "Wellness", "Massage", "Cleansing", "Exercise", "Herbs"};
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
