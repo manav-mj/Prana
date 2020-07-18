@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_lifestyle"
+        android:icon="@drawable/ic_human"
+        android:title="@string/title_lifestyle" />
+
+    <item
+        android:id="@+id/navigation_habit"
+        android:icon="@drawable/ic_tracker"
+        android:title="@string/title_habit" />
+
+    <item
+        android:id="@+id/navigation_remedies"
+        android:icon="@drawable/ic_remedies"
+        android:title="@string/title_remedies" />
+
+</menu>
