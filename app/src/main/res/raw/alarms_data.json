@@ -1,0 +1,28 @@
+﻿{
+    "alarms": [
+        {
+            "id": "1",
+            "title": "Wake up",
+            "time": "6:30",
+            "frequencyPerDay": "1",
+            "streak": "20",
+            "active": true
+        },
+        {
+            "id": "2",
+            "title": "Exercise and meditation",
+            "time": "7:00",
+            "frequencyPerDay": "1",
+            "streak": "20",
+            "active": true
+        },
+        {
+            "id": "3",
+            "title": "Drink warm lemon water",
+            "time": "8:00",
+            "frequencyPerDay": "1",
+            "streak": "20",
+            "active": true
+        }
+    ]
+}
