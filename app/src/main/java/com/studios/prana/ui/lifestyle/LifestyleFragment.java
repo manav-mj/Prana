@@ -10,11 +10,14 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
+import androidx.navigation.NavGraphNavigator;
+import androidx.navigation.fragment.NavHostFragment;
 
 import com.google.android.material.tabs.TabLayout;
 import com.studios.prana.R;
 import com.studios.prana.models.LifestyleData;
 import com.studios.prana.models.LifestyleTile;
+import com.studios.prana.ui.tracker.HabitTrackerFragment;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -52,6 +55,15 @@ public class LifestyleFragment extends Fragment {
                     ((View) view.findViewById(R.id.header_container)).setBackgroundResource(colors[i]);
 
                     mListContainer.addView(view);
+
+                    if (i==0){
+                        view.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                NavHostFragment.findNavController(LifestyleFragment.this).navigate(R.id.readFragment);
+                            }
+                        });
+                    }
                 }
             }
         });

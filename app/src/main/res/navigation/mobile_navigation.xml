@@ -6,20 +6,46 @@
     app:startDestination="@+id/navigation_lifestyle">
 
     <fragment
-        android:id="@+id/navigation_lifestyle"
-        android:name="com.studios.prana.ui.lifestyle.LifestyleFragment"
-        android:label="@string/title_lifestyle"
-        tools:layout="@layout/fragment_home" />
-
+        android:id="@+id/navigation_add_alarm"
+        android:name="com.studios.prana.ui.tracker.AddAlarmFragment"
+        android:label="fragment_add_alarm"
+        tools:layout="@layout/fragment_add_alarm" />
     <fragment
         android:id="@+id/navigation_habit"
         android:name="com.studios.prana.ui.tracker.HabitTrackerFragment"
         android:label="@string/title_habit"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_dashboard">
+        <action
+            android:id="@+id/action_navigation_habit_to_addAlarmFragment"
+            app:destination="@id/navigation_add_alarm" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_lifestyle"
+        android:name="com.studios.prana.ui.lifestyle.LifestyleFragment"
+        android:label="@string/title_lifestyle"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_lifestyle_to_readFragment"
+            app:destination="@id/readFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_remedies"
         android:name="com.studios.prana.ui.Remedies.RemediesFragment"
         android:label="@string/title_remedies"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_navigation_remedies_to_remedyListFragment"
+            app:destination="@id/remedyListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/readFragment"
+        android:name="com.studios.prana.ui.lifestyle.ReadFragment"
+        android:label="fragment_read"
+        tools:layout="@layout/fragment_read" />
+    <fragment
+        android:id="@+id/remedyListFragment"
+        android:name="com.studios.prana.ui.Remedies.RemedyListFragment"
+        android:label="fragment_remedy_list"
+        tools:layout="@layout/fragment_remedy_list" />
 </navigation>

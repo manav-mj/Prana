@@ -13,8 +13,10 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
+import androidx.navigation.fragment.NavHostFragment;
 
 import com.studios.prana.R;
+import com.studios.prana.ui.tracker.HabitTrackerFragment;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -26,7 +28,7 @@ public class RemediesFragment extends Fragment {
 
     private RemediesViewModel remediesViewModel;
 
-    private int[] icons = {R.drawable.ic_mind, R.drawable.ic_heart, R.drawable.ic_skin, R.drawable.ic_digestive, R.drawable.ic_eye, R.drawable.ic_dental, R.drawable.ic_nose, R.drawable.ic_blood, R.drawable.ic_hair, R.drawable.ic_uterus, R.drawable.ic_feet, R.drawable.ic_sleep, R.drawable.ic_obesity, R.drawable.ic_ear, R.drawable.ic_speech};
+    private int[] icons = {R.drawable.ic_skin, R.drawable.ic_heart, R.drawable.ic_mind, R.drawable.ic_digestive, R.drawable.ic_eye, R.drawable.ic_dental, R.drawable.ic_nose, R.drawable.ic_blood, R.drawable.ic_hair, R.drawable.ic_uterus, R.drawable.ic_feet, R.drawable.ic_sleep, R.drawable.ic_obesity, R.drawable.ic_ear, R.drawable.ic_speech};
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -49,7 +51,7 @@ public class RemediesFragment extends Fragment {
                         view.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
-                                Toast.makeText(getContext(), "test", Toast.LENGTH_SHORT).show();
+                                NavHostFragment.findNavController(RemediesFragment.this).navigate(R.id.remedyListFragment);
                             }
                         });
                     }

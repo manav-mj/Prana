@@ -12,6 +12,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
+import androidx.navigation.fragment.NavHostFragment;
 import androidx.viewpager.widget.ViewPager;
 
 import com.studios.prana.R;
@@ -25,6 +26,8 @@ public class HabitTrackerFragment extends Fragment {
 
     @BindView(R.id.alarm_container)
     LinearLayout mContainerLayout;
+    @BindView(R.id.add_alarm)
+    View addAlarmButton;
 
     private HabitTrackerViewModel habitTrackerViewModel;
 
@@ -33,6 +36,7 @@ public class HabitTrackerFragment extends Fragment {
         habitTrackerViewModel = new HabitTrackerViewModel(getContext());
         View root = inflater.inflate(R.layout.fragment_notifications, container, false);
         ButterKnife.bind(this, root);
+
         habitTrackerViewModel.getText().observe(getViewLifecycleOwner(), new Observer<TrackerData>() {
             @Override
             public void onChanged(TrackerData trackerData) {
@@ -46,6 +50,13 @@ public class HabitTrackerFragment extends Fragment {
 
                     mContainerLayout.addView(view);
                 }
+            }
+        });
+
+        addAlarmButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(HabitTrackerFragment.this).navigate(R.id.navigation_add_alarm);
             }
         });
         return root;

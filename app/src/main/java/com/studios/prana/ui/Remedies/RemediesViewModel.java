@@ -10,7 +10,7 @@ public class RemediesViewModel extends ViewModel {
 
     private MutableLiveData<String[]> mTitles;
 
-    private final String[] titles = {"Mind", "Cardiovascular","Skin","Digestive","Eye","Dental","Nose","Blood","Hair","Uterus","Feet","Sleep","Obesity","Ear","Speech"};
+    private final String[] titles = {"Skin", "Cardiovascular","Mind","Digestive","Eye","Dental","Nose","Blood","Hair","Uterus","Feet","Sleep","Obesity","Ear","Speech"};
 
     public RemediesViewModel() {
         mTitles = new MutableLiveData<>();
